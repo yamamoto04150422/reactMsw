@@ -1,7 +1,50 @@
+## msw
+
 npm install msw --save-dev
 
 npx msw init public/ --save
 
+## eslint
+
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-import eslint-config-next --save-dev
+
+
+@typescript-eslint/parser: TypeScriptコードをESLintが理解できるようにするためのパーサー。
+@typescript-eslint/eslint-plugin: TypeScript専用のルールを提供。
+eslint-plugin-react: React用のルールセット。
+eslint-plugin-react-hooks: React Hooks用のルールセット。
+eslint-plugin-jsx-a11y: アクセシビリティ（a11y）に関連するルールセット。
+eslint-plugin-import: インポート/エクスポートの整理と検証のためのプラグイン。
+eslint-config-next: Next.jsに特化したESLint設定。
+
+
+方法1: --legacy-peer-depsフラグを使用する
+このフラグを使用してインストールを強制し、依存関係の解決をスキップします。
+
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-import eslint-config-next --save-dev --legacy-peer-deps
+
+
+## prettier
+
+npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+
+方法1: --legacy-peer-depsフラグを使用
+このフラグを使って、依存関係のチェックを無視してインストールを進めます。
+npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev --legacy-peer-deps
+
+## settings.json
+<code>
+{
+  "editor.formatOnSave": true, // 保存時に自動でフォーマット
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettierをデフォルトのフォーマッタに設定
+  "eslint.validate": ["javascript", "typescript", "typescriptreact", "javascriptreact"], // ESLintの適用対象
+  "eslint.autoFixOnSave": true // 保存時にESLintで自動修正
+}
+</code>
+
+ESLintはコード品質を向上させ、プロジェクト全体での一貫性を確保します。
+Prettierはコードフォーマットを一貫して適用します。
+TypeScriptとNext.jsに特化した設定により、開発効率とコード品質を両立させます。
 
 # React + TypeScript + Vite
 
