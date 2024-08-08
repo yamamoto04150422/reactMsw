@@ -46,6 +46,8 @@ ESLintはコード品質を向上させ、プロジェクト全体での一貫�
 Prettierはコードフォーマットを一貫して適用します。
 TypeScriptとNext.jsに特化した設定により、開発効率とコード品質を両立させます。
 
+C:\Users\ユーザ名\.vscode\extensionsPlainCopy
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
